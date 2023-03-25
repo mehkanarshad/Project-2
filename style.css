@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300;1,400&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+/* ...................................utility classes........ */
+.container {
+  margin: auto;
+  max-width: 1200px;
+  width: 90%;
+  font-size: 7rem;
+}
+.btn {
+  color: white;
+  background-color: green;
+  padding: 2rem;
+  margin: 1.5rem;
+  text-decoration: none;
+  border-radius: 20%;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 4.5em;
+}
+ul {
+  list-style: none;
+
+  display: flex;
+  margin-top: 2rem;
+  /* margin-left:28rem; */
+}
+ul a {
+  color: black;
+  text-decoration: none;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  transition: color 0.4s ease-in;
+}
+/* #####################nav-bar style########### */
+/* desktop mode  */
+.nav-bar input[type="checkbox"],
+.nav-bar .hamburger-lines {
+  display: none;
+}
+.nav-bar {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 10px #aaa;
+  position: fixed;
+  opacity: 0.6;
+  width: 100%;
+  z-index: 999;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+ul a:hover {
+  color: green;
+}
+/* ................showcae.................. */
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background: linear-gradient(
+      rgba(156, 156, 193, 0.317),
+      rgba(204, 204, 230, 0.354)
+    ),
+    url(./img/brooke-lark-W9OKrxBqiZA-unsplash.jpg);
+  /* background-position: 23px; */
+  background-size: cover;
+  background-repeat: none;
+}
+.showcase-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(25, 28, 28);
+  font-size: 4rem;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-size: cover;
+  line-height: 1.5em;
+}
+/* ....................about...................  */
+.about {
+  display: flex;
+  padding: 4rem 0rem;
+
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap-reverse; */
+}
+.about-txt {
+  font-size: 3rem;
+  flex-basis: 50%;
+  background-color: #efefef;
+  /* margin:auto; */
+  transform: translate(150%);
+  animation: left-to-center 1s ease-in-out forwards;
+  padding: 2rem;
+  margin-bottom: 0.5em;
+}
+@keyframes left-to-center {
+  100% {
+    transform: translate(0%);
+  }
+}
+.about-img {
+  height: 120%;
+  flex-basis: 50%;
+  display: block;
+  object-fit: cover;
+  object-position: right;
+  transform: translate(-150%);
+
+  animation: left-to-center-img 1s ease-in-out forwards;
+}
+@keyframes left-to-center-img {
+  100% {
+    transform: translate(0%);
+  }
+}
+.about-txt h2 {
+  font-size: 4rem;
+}
+.about-txt h5,
+p {
+  color: rgb(54, 53, 53);
+}
+/* .....................................................food types.....................................  */
+.foodtypes {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5rem 0rem 5rem 0rem;
+}
+
+.foodtypes img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+.relative {
+  position: relative;
+  transition: background 3s ease-in-out;
+  background: none;
+}
+.btn:hover {
+  background-color: rgba(0, 128, 0, 0.683);
+}
+.absolute {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+}
+.absolute:hover {
+  opacity: 1;
+  top: 50%;
+}
+.relative:hover::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.429);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  display: block;
+  z-index: 1;
+}
+/* ........................................ food menu......................  */
+.food-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0;
+}
+.type .img {
+  display: block;
+  height: 290px;
+  width: 290px;
+  border-radius: 100%;
+  margin: 20px;
+}
+.type {
+  display: flex;
+  padding: 3rem;
+}
+.type img {
+  border-radius: 100%;
+}
+.food-menu-txt {
+  padding: 5rem 0rem;
+}
+.my-heading {
+  color: rgba(64, 66, 64, 0.596);
+  text-align: center;
+  font-size: 5rem;
+}
+.food-title {
+  font-weight: 500px;
+  font-style: initial;
+}
+.type p {
+  color: gray;
+}
+.type .food-price {
+  /* color: green; */
+  font-weight: 400px;
+}
+/* ............................................Testimonial...........................................  */
+.sub-testimonial {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonial {
+  text-align: center;
+  background-color: rgb(224, 220, 220);
+  padding: 4rem;
+}
+.person1,
+.person2,
+.person3 {
+  flex-basis: 30%;
+  color: rgba(0, 0, 0, 0.58);
+}
+.testimonial img {
+  border-radius: 100%;
+  width: 30%;
+}
+.testimonial .testimonial-heading {
+  text-align: center;
+  font-size: 5rem;
+  padding: 2rem;
+}
+/* ..........................................Contact.............................................  */
+.contact {
+  padding: 2rem;
+  display: flex;
+  margin-bottom: 10rem;
+
+  margin-top: 10rem;
+  justify-content: space-between;
+  background-color: rgba(170, 170, 170, 0.377);
+}
+.contact-img {
+  height: 100%;
+  flex-basis: 49%;
+}
+.contact-form {
+  flex-basis: 49%;
+}
+.mytype a {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background-color: green;
+  padding: 2rem;
+  border-radius: 30%;
+  margin: 1rem;
+}
+.small-pic {
+  display: none;
+}
+.contact-form input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  display: block;
+  background-color: rgba(170, 170, 170, 0);
+  margin: 0.5rem;
+}
+.mytype a:hover {
+  background-color: rgba(0, 128, 0, 0.68);
+}
+footer {
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+  padding: 3rem;
+  font-size: 7rem;
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 1029px) {
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about {
+    display: flex;
+    padding: 2rem 0rem;
+
+    flex-direction: column;
+  }
+  .about-txt {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 850px) {
+  .testimonial .image {
+    width: 90%;
+  }
+  .foodtypes {
+    flex-direction: column;
+  }
+  .type {
+    display: none;
+  }
+  .contact {
+    padding: 2rem;
+    display: flex;
+    margin-bottom: 10rem;
+    flex-direction: column;
+    margin-top: 10rem;
+    justify-content: space-between;
+    background-color: rgba(170, 170, 170, 0.377);
+  }
+  .big-pic {
+    display: none;
+  }
+  .small-pic {
+    display: block;
+  }
+}
